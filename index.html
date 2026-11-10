@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Asmin Purushotham · Senior Android & Flutter Developer</title>
-<meta name="description" content="Asmin Purushotham: Senior Android & Flutter developer and team lead with 11+ years building fintech, e-commerce and enterprise mobile apps.">
+<meta name="description" content="Asmin Purushotham: Senior Android & Flutter developer and team lead with 11+ years of Android and 5+ years of Flutter, specialising in Jetpack Compose, Flutter and fintech/algorithmic trading.">
 <meta property="og:title" content="Asmin Purushotham · Senior Android & Flutter Developer">
 <meta property="og:description" content="11+ years of Android, 5+ years of Flutter. Fintech, e-commerce and enterprise mobile apps, from design to Play Store.">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/31403417?v=4">
@@ -85,6 +85,11 @@ section{padding:64px 0;border-top:1px solid var(--border)}
 .client{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
 .client b{display:block;font-size:15px}
 .client span{font-size:13px;color:var(--muted)}
+a.client{color:var(--text)}
+a.client:hover{text-decoration:none;border-color:var(--accent)}
+a.chip:hover{text-decoration:none;filter:brightness(.95)}
+.card ul b{color:var(--text);font-weight:600}
+.job p b{color:var(--text);font-weight:600}
 
 /* timeline */
 .timeline{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--border)}
@@ -97,7 +102,7 @@ section{padding:64px 0;border-top:1px solid var(--border)}
 .job p{color:var(--muted);margin:6px 0 0;font-size:15px;max-width:720px}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 20px}
 .skill h3{font-size:15px;font-family:var(--mono);font-weight:500;color:var(--muted);margin-bottom:12px}
 
 /* contact */
@@ -137,7 +142,7 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:13px;f
     <div>
       <p class="kicker">// Senior Android &amp; Flutter Developer · Team Lead</p>
       <h1>I build mobile apps that <em>ship</em> and <em>scale</em>.</h1>
-      <p class="lede">I'm Asmin Purushotham, a mobile engineer in Kochi with 11+ years of Android and 5+ years of Flutter. I've built fintech, e-commerce and enterprise apps and taken them from architecture to Play Store release. Right now I lead the team behind an algorithmic trading platform for the NSE.</p>
+      <p class="lede">I'm Asmin Purushotham. I lead mobile teams, with 11+ years of Android and 5+ years shipping Flutter apps to Android and iOS, and I specialise in Jetpack Compose and Flutter. I own delivery from architecture to Play Store release, including CI/CD pipelines that publish builds automatically. My deepest domain is fintech and algorithmic trading on the NSE.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch</a>
         <a class="btn" href="https://www.linkedin.com/in/asminpurushotham" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -149,9 +154,9 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:13px;f
 
   <div class="stats">
     <div class="stat"><b>11+</b><span>years in Android</span></div>
-    <div class="stat"><b>5+</b><span>years in Flutter</span></div>
+    <div class="stat"><b>5+</b><span>years in Flutter (Android &amp; iOS)</span></div>
     <div class="stat"><b>8–10</b><span>developers led</span></div>
-    <div class="stat"><b>15+</b><span>apps shipped</span></div>
+    <div class="stat"><b>98%</b><span>crash-free rate across 10 client companies</span></div>
   </div>
 </main>
 
@@ -159,52 +164,64 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:13px;f
   <div class="sec-head"><p>01 / work</p><h2>Selected work</h2></div>
   <div class="grid">
     <article class="card feature">
-      <div class="label">Personal product · Google Play</div>
+      <div class="label">Fintech · Ongoing · Architect &amp; Developer</div>
       <div class="cols">
         <div>
-          <h3>ShopCollector</h3>
-          <p>An app for managing shops and collections, which I designed, built and run on my own. Every merge goes to Google Play through an automated pipeline.</p>
+          <h3>Lyrava AlgoSuite</h3>
+          <p>An algorithmic trading suite in two parts, under active development.</p>
           <ul>
-            <li>Offline-first data layer on Room, with Paging 3 for large lists</li>
-            <li>Clean architecture with separate data, domain and UI layers and Hilt DI</li>
-            <li>Background sync and reminders with WorkManager and FCM</li>
-            <li>GitHub Actions CI on every PR; merges deploy to Play tracks automatically</li>
+            <li><b>Trading app (Jetpack Compose):</b> live, paper and simulated trading on the NSE through FlatTrade, IIFL and Upstox. It takes live market data over WebSockets and runs a background trading service.</li>
+            <li>Strategy signals come from VWAP, MACD, RSI, EMA, DMI and breakout indicators.</li>
+            <li><b>Backtesting engine (Rust):</b> fetches historical NSE candles from Upstox, caches them in SQLite, tests strategies in parallel and shows results in a desktop charting UI.</li>
           </ul>
         </div>
         <div class="chips" style="align-content:flex-start">
-          <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Room</span><span class="chip">Paging 3</span><span class="chip">Hilt</span><span class="chip">Coroutines &amp; Flow</span><span class="chip">WorkManager</span><span class="chip">FCM</span><span class="chip">GitHub Actions</span><span class="chip">Gradle Play Publisher</span>
+          <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Dagger</span><span class="chip">Coroutines &amp; Flow</span><span class="chip">Room</span><span class="chip">Retrofit</span><span class="chip">OkHttp WebSockets</span><span class="chip">Foreground Services</span><span class="chip">Crashlytics</span><span class="chip">Rust</span><span class="chip">Tokio</span><span class="chip">Axum</span><span class="chip">Rayon</span><span class="chip">egui</span><span class="chip">SQLite</span>
         </div>
       </div>
     </article>
 
     <article class="card">
-      <div class="label">Fintech · Lyrava Technologies</div>
-      <h3>Algorithmic trading platform</h3>
-      <p>A proprietary platform that automates intraday, currency and futures trading on the NSE. I lead the mobile team and own technical decisions, real-time risk controls and end-to-end delivery.</p>
-      <div class="chips"><span class="chip">Flutter</span><span class="chip">Android</span><span class="chip">Python</span><span class="chip">Real-time data</span></div>
+      <div class="label">Marketplace · Flutter</div>
+      <h3>SKIBI</h3>
+      <p>A two-sided marketplace that connects workers with the people who hire them, where one account can do both. It has Google and Apple sign-in, job posting and applications, worker discovery by category, and in-app messaging and notifications. Every build is published to Play internal testing through CI/CD.</p>
+      <div class="chips"><span class="chip">Flutter</span><span class="chip">Riverpod</span><span class="chip">GoRouter</span><span class="chip">Dio</span><span class="chip">Firebase Auth</span><span class="chip">Crashlytics</span><span class="chip">FCM</span><span class="chip">GitHub Actions</span></div>
     </article>
 
     <article class="card">
-      <div class="label">Social · Flutter</div>
+      <div class="label">Community · Flutter</div>
       <h3>Cigar Community</h3>
-      <p>A cross-platform community app with social sign-in, QR scanning, location features and a layered architecture.</p>
-      <div class="chips"><span class="chip">Flutter</span><span class="chip">Riverpod</span><span class="chip">go_router</span><span class="chip">Dio</span><span class="chip">Firebase</span></div>
+      <p>A community app for cigar enthusiasts. It has lounges and events, a personal humidor and journal, member passes with QR codes, gamification, an AI assistant and real-time community updates. Sign-in is with Google or Apple, and it uses maps and location.</p>
+      <div class="chips"><span class="chip">Flutter</span><span class="chip">Riverpod</span><span class="chip">GoRouter</span><span class="chip">Dio</span><span class="chip">Pusher Channels</span><span class="chip">Google Maps</span><span class="chip">Firebase</span></div>
+    </article>
+
+    <article class="card">
+      <div class="label">Personal product · Android</div>
+      <h3>ShopCollector</h3>
+      <p>A shop and collection management app that I designed and built on my own. It's offline-first on Room with Paging 3, uses clean architecture with Hilt, does background sync with WorkManager, and deploys to Play through GitHub Actions.</p>
+      <div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Room</span><span class="chip">Paging 3</span><span class="chip">Hilt</span><span class="chip">WorkManager</span><span class="chip">Gradle Play Publisher</span></div>
+    </article>
+
+    <article class="card">
+      <div class="label">AI trading · Flutter · Team of 15</div>
+      <h3>SmartBasket.ai</h3>
+      <p>An AI-powered automated trading system for hands-free investing. It calculates and regulates risk dynamically to limit exposure during sharp market moves.</p>
+      <div class="chips"><span class="chip">Flutter</span><a class="chip" href="https://play.google.com/store/apps/details?id=com.algorithma.smartbasket" target="_blank" rel="noopener">Play Store ↗</a></div>
     </article>
   </div>
 
-  <h3 style="font-size:18px;margin-top:40px">Client apps I've led or built</h3>
+  <h3 style="font-size:18px;margin-top:40px">More client apps</h3>
   <div class="clients">
-    <div class="client"><b>SmartBasket.ai</b><span>Flutter · team of 15</span></div>
-    <div class="client"><b>Jazp.com</b><span>Compose · MVVM · project lead</span></div>
-    <div class="client"><b>FlockLink</b><span>Flutter · project lead</span></div>
-    <div class="client"><b>QuickOne</b><span>Flutter · project lead</span></div>
-    <div class="client"><b>ClubSave</b><span>Flutter</span></div>
-    <div class="client"><b>Ultimate BigShopper</b><span>Kotlin · PayUmoney · lead</span></div>
-    <div class="client"><b>YouWe</b><span>Kotlin · GCM · lead</span></div>
-    <div class="client"><b>Ecrio MNO</b><span>Kotlin · design &amp; dev</span></div>
-    <div class="client"><b>Inspyr</b><span>Kotlin</span></div>
-    <div class="client"><b>RetailBean</b><span>Kotlin · project lead</span></div>
-    <div class="client"><b>Needss</b><span>Kotlin · team of 9</span></div>
+    <a class="client" href="https://play.google.com/store/apps/details?id=www.jazp.com.jazp" target="_blank" rel="noopener"><b>Jazp.com ↗</b><span>E-commerce in UAE, Oman, Qatar, KSA · Compose · project lead</span></a>
+    <a class="client" href="https://play.google.com/store/apps/details?id=com.bulkbuysplitter" target="_blank" rel="noopener"><b>ClubSave ↗</b><span>Bulk-buy sharing · Flutter, Stacked, IAP, Ably</span></a>
+    <a class="client" href="https://play.google.com/store/apps/details?id=com.byteriver.flocklinkapp" target="_blank" rel="noopener"><b>FlockLink ↗</b><span>Community updates &amp; payments · Flutter · project lead</span></a>
+    <a class="client" href="https://play.google.com/store/apps/details?id=com.inspyr.app" target="_blank" rel="noopener"><b>Inspyr ↗</b><span>Entrepreneurship learning · Compose</span></a>
+    <a class="client" href="https://play.google.com/store/apps/details?id=app.needscustomer" target="_blank" rel="noopener"><b>Needss ↗</b><span>Hyperlocal grocery delivery · Compose</span></a>
+    <a class="client" href="https://play.google.com/store/apps/details?id=com.appzoc.youwe" target="_blank" rel="noopener"><b>YouWe ↗</b><span>Broadcast messaging · Java, GCM · project lead</span></a>
+    <a class="client" href="https://play.google.com/store/apps/details?id=com.bigshopper.mobile" target="_blank" rel="noopener"><b>Ultimate BigShopper ↗</b><span>Local commerce · Java, PayUmoney · project lead</span></a>
+    <div class="client"><b>QuickOne</b><span>Shop &amp; collections management · Flutter, Socket.IO · project lead</span></div>
+    <div class="client"><b>RetailBean</b><span>Multi-store retail management · Compose, Room · project lead</span></div>
+    <div class="client"><b>Ecrio MNO</b><span>A2P SMS/MMS/RCS messaging for telecoms · Compose</span></div>
   </div>
 </div></section>
 
@@ -212,39 +229,46 @@ footer{padding:36px 0 48px;text-align:center;color:var(--muted);font-size:13px;f
   <div class="sec-head"><p>02 / experience</p><h2>Experience</h2></div>
   <div class="timeline">
     <div class="job"><div class="when">Oct 2025 – Present</div><h3>Team Lead, Flutter / Android</h3><div class="org">Lyrava Technologies</div>
-      <p>Lead 8–10 developers building an algorithmic trading platform for the NSE. I own architecture, risk-management controls and release delivery.</p></div>
+      <p>I lead a team of 8–10 developers and own technical decisions, code reviews and delivery of a proprietary algorithmic trading platform, across 2 production releases so far. I built its real-time risk-management controls and its low-latency order execution through broker APIs.</p></div>
     <div class="job"><div class="when">Apr 2023 – Aug 2025</div><h3>Senior Software Engineer, Android &amp; Flutter</h3><div class="org">SayOne Technologies</div>
-      <p>Architected and shipped Android and Flutter apps from design to Play Store, guided architecture and code quality across the team, and mentored developers through code reviews.</p></div>
-    <div class="job"><div class="when">Jun 2020 – Mar 2023</div><h3>Senior Android Developer</h3><div class="org">Blockbuster Technologies</div>
-      <p>Led architecture across concurrent Android projects, standardised coding practices, and planned releases with product and QA.</p></div>
+      <p>I architected and delivered 2 Android and Flutter apps from design to Play Store, keeping a <b>98% crash-free rate</b> across 10 active client companies. I set the standards for state management, testing and code review for a team of 8 engineers.</p></div>
+    <div class="job"><div class="when">Jun 2020 – Mar 2023</div><h3>Senior Android / Flutter Developer</h3><div class="org">Blockbuster Technologies</div>
+      <p>I led architecture across 3 concurrent Android and Flutter projects. I standardised coding practices for a team of 10, which <b>cut the QA cycle by 10 days</b>, and planned 6 releases per quarter.</p></div>
     <div class="job"><div class="when">Sep 2019 – May 2020</div><h3>Senior Android Developer</h3><div class="org">Timeline Technology Solution</div>
-      <p>Set technical direction, mentored junior developers, and handled the full release lifecycle.</p></div>
+      <p>I delivered 6 Android apps and raised their average rating to 4 stars, with <b>90% on-time delivery</b>. I also led technical strategy for a team of 4.</p></div>
     <div class="job"><div class="when">Aug 2017 – Sep 2019</div><h3>Android Developer</h3><div class="org">mFluid Mobile Apps</div>
-      <p>Built and maintained Android apps through the full lifecycle, from requirements to release.</p></div>
+      <p>I built and maintained 7 Android apps that reached <b>10K+ downloads</b>, supported 5,000+ active users and shipped 96% of their features on schedule.</p></div>
     <div class="job"><div class="when">Apr 2015 – Jul 2017</div><h3>Android Developer</h3><div class="org">Appzoc Technologies (now Webcastle)</div>
-      <p>Coding, product design and planning for Android apps, including performance work and adoption of modern libraries.</p></div>
+      <p>I handled coding, product design and planning for 10 Android apps with 5,000+ combined downloads, including performance work that improved load and response times.</p></div>
   </div>
 </div></section>
 
 <section id="skills"><div class="wrap">
   <div class="sec-head"><p>03 / skills</p><h2>Toolkit</h2></div>
   <div class="skills">
-    <div class="skill"><h3>languages</h3><div class="chips"><span class="chip">Kotlin</span><span class="chip">Java</span><span class="chip">Dart</span><span class="chip">Python</span></div></div>
-    <div class="skill"><h3>android</h3><div class="chips"><span class="chip">Jetpack Compose</span><span class="chip">Coroutines</span><span class="chip">Flow</span><span class="chip">Room</span><span class="chip">Paging 3</span><span class="chip">Hilt</span><span class="chip">WorkManager</span><span class="chip">Retrofit</span><span class="chip">OkHttp</span><span class="chip">RxJava</span></div></div>
-    <div class="skill"><h3>flutter</h3><div class="chips"><span class="chip">Bloc</span><span class="chip">Riverpod</span><span class="chip">go_router</span><span class="chip">Dio</span><span class="chip">Firebase</span><span class="chip">Firestore</span></div></div>
-    <div class="skill"><h3>architecture</h3><div class="chips"><span class="chip">Clean Architecture</span><span class="chip">MVVM</span><span class="chip">MVP</span><span class="chip">SOLID</span><span class="chip">DI</span></div></div>
-    <div class="skill"><h3>delivery</h3><div class="chips"><span class="chip">Unit testing</span><span class="chip">UI testing</span><span class="chip">GitHub Actions</span><span class="chip">Play Store releases</span><span class="chip">Git</span></div></div>
-    <div class="skill"><h3>integrations</h3><div class="chips"><span class="chip">REST APIs</span><span class="chip">FCM</span><span class="chip">AWS</span><span class="chip">PayUmoney</span><span class="chip">PayPal</span><span class="chip">Payfort</span></div></div>
+    <div class="skill"><h3>languages</h3><div class="chips"><span class="chip">Kotlin</span><span class="chip">Java</span><span class="chip">Dart</span><span class="chip">Python</span><span class="chip">Rust</span></div></div>
+    <div class="skill"><h3>android</h3><div class="chips"><span class="chip">Jetpack Compose (M3)</span><span class="chip">XML Views</span><span class="chip">Coroutines &amp; Flow</span><span class="chip">Room</span><span class="chip">Paging 3</span><span class="chip">WorkManager</span><span class="chip">DataStore</span><span class="chip">Credential Manager</span><span class="chip">Foreground Services</span><span class="chip">Play Billing</span><span class="chip">BLE / GATT</span></div></div>
+    <div class="skill"><h3>flutter</h3><div class="chips"><span class="chip">Android &amp; iOS</span><span class="chip">Riverpod</span><span class="chip">Bloc</span><span class="chip">Stacked</span><span class="chip">GoRouter</span><span class="chip">Dio</span><span class="chip">In-App Purchase</span></div></div>
+    <div class="skill"><h3>architecture</h3><div class="chips"><span class="chip">Clean Architecture</span><span class="chip">MVVM</span><span class="chip">MVP</span><span class="chip">MVC</span><span class="chip">Repository</span><span class="chip">Hilt / Dagger</span></div></div>
+    <div class="skill"><h3>real-time &amp; networking</h3><div class="chips"><span class="chip">REST</span><span class="chip">Retrofit</span><span class="chip">OkHttp</span><span class="chip">WebSockets</span><span class="chip">Pusher</span><span class="chip">Ably</span><span class="chip">Socket.IO</span><span class="chip">FCM</span></div></div>
+    <div class="skill"><h3>firebase &amp; cloud</h3><div class="chips"><span class="chip">Auth (Google/Apple)</span><span class="chip">Firestore</span><span class="chip">Crashlytics</span><span class="chip">Analytics</span><span class="chip">Remote Config</span><span class="chip">App Check</span><span class="chip">AWS</span></div></div>
+    <div class="skill"><h3>testing</h3><div class="chips"><span class="chip">JUnit</span><span class="chip">Espresso</span><span class="chip">UI Automator</span><span class="chip">Compose UI tests</span><span class="chip">mocktail</span><span class="chip">Flutter integration tests</span></div></div>
+    <div class="skill"><h3>ci/cd &amp; release</h3><div class="chips"><span class="chip">GitHub Actions</span><span class="chip">Gradle Play Publisher</span><span class="chip">Play Console tracks</span><span class="chip">App signing</span><span class="chip">Git / GitHub / GitLab</span></div></div>
+    <div class="skill"><h3>trading &amp; quant</h3><div class="chips"><span class="chip">FlatTrade</span><span class="chip">IIFL</span><span class="chip">Upstox</span><span class="chip">VWAP · MACD · RSI · EMA · DMI</span><span class="chip">Backtesting</span><span class="chip">pandas-ta</span><span class="chip">scikit-learn</span></div></div>
+    <div class="skill"><h3>integrations</h3><div class="chips"><span class="chip">PayUmoney</span><span class="chip">PayPal</span><span class="chip">Payfort</span><span class="chip">Google Maps &amp; Places</span><span class="chip">AppsFlyer</span><span class="chip">QR scanning</span></div></div>
+    <div class="skill"><h3>ai-assisted engineering</h3><div class="chips"><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip">OpenCode</span><span class="chip">Gemini</span><span class="chip">Grok</span><span class="chip">Agentic QA &amp; triage</span><span class="chip">GitHub Projects</span></div></div>
+    <div class="skill"><h3>certifications</h3><div class="chips"><span class="chip">AI Foundations · OpenAI Academy (2026)</span><span class="chip">Intro to Generative AI · Google</span><span class="chip">Intro to LLMs · Google</span></div></div>
   </div>
 </div></section>
 
 <section id="contact"><div class="wrap">
   <div class="contact">
     <h2>Let's build something.</h2>
-    <p>I'm open to senior Android, Flutter and mobile lead roles in Bangalore, Hyderabad, Pune, Kochi or Trivandrum, and I can join immediately.</p>
+    <p>I'm open to senior Android, Flutter and mobile lead roles. I can join immediately and I'm open to relocating. My preferred locations are Bangalore, Hyderabad, Pune, Kochi and Trivandrum.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:asminpurushotham@gmail.com">asminpurushotham@gmail.com</a>
       <a class="btn" href="https://www.linkedin.com/in/asminpurushotham" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://gitlab.com/asminpurushotham" target="_blank" rel="noopener">GitLab ↗</a>
     </div>
   </div>
 </div></section>
